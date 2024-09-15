@@ -1,0 +1,130 @@
+body,
+html {
+  font-family: "Rubik", sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+h1 {
+  color: white;
+}
+.page {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  font-family: "Rubik", sans-serif;
+}
+.searchContainer {
+  background-image: url("/assets/images/pattern-bg-desktop.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 300px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+.searchBar {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.searchBar input {
+  padding: 1rem;
+  border: none;
+  border-radius: 15px;
+  border-right: 0px;
+  min-width: 450px;
+}
+
+.searchBar button {
+  background-color: black;
+  padding: 1rem 1.2rem;
+  position: absolute;
+  right: 0;
+  border-radius: 15px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border: none;
+  cursor: pointer;
+}
+#map {
+  position: static;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding-bottom: 6rem;
+}
+.results {
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  border-radius: 10px;
+  width: 65%;
+  padding: 1.5rem;
+  position: absolute;
+  z-index: 9292929;
+  top: 30%;
+}
+p {
+  font-size: 12px;
+  color: hsl(0, 0%, 59%);
+  font-weight: 700;
+  letter-spacing: 0.1rem;
+  margin-bottom: 5px;
+  margin-top: 15px;
+}
+span {
+  font-family: "Rubik", sans-serif;
+  color: black;
+  font-size: 18px;
+}
+.results hr {
+  margin-right: 2rem;
+  margin-left: 1rem;
+  border: 1px thin gray;
+}
+.result-item {
+  text-wrap: wrap;
+}
+
+input[type="text"] {
+  /* border: 1px solid #ccc; */
+  outline: none;
+  /* padding: 8px; */
+  font-weight: 400;
+  box-sizing: border-box;
+}
+
+input[type="text"]:focus {
+  /* border: 1px solid #000; */
+  box-shadow: none;
+
+  font-weight: 400;
+}
+
+@media (max-width: 800px) {
+  .results {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 0;
+  }
+  hr {
+    display: none;
+  }
+  .searchBar input {
+    width: auto;
+    min-width: 300px;
+  }
+}

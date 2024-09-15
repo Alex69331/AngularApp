@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>IpAdressTracker</title>
+  </head>
+  <body>
+    <div class="page">
+      <div class="searchContainer">
+        <h1>IP Address Tracker</h1>
+        <div class="searchBar">
+          <input
+            type="text"
+            placeholder="Search for any IP address or domain"
+            #ipInput
+          />
+          <button (click)="searchIP(ipInput.value)">
+            <img src="assets/images/icon-arrow.svg" alt="" />
+          </button>
+        </div>
+        <div class="results">
+          <div class="result-item">
+            <p>IP ADDRESS</p>
+            <span class="result">
+              <strong>{{ ipInfo.ip }}</strong>
+            </span>
+          </div>
+          <hr />
+          <div class="result-item">
+            <p>LOCATION</p>
+            <span class="result">
+              <strong>{{ ipInfo.location }}</strong>
+            </span>
+          </div>
+          <hr />
+          <div class="result-item">
+            <p>TIMEZONE</p>
+            <span class="result">
+              <strong>{{ ipInfo.timezone }}</strong>
+            </span>
+          </div>
+          <hr />
+          <div class="result-item">
+            <p>ISP</p>
+            <span class="result">
+              <strong>{{ ipInfo.isp }}</strong>
+            </span>
+          </div>
+        </div>
+      </div>
+      <div id="map" style="height: 50vh; width: 100%"></div>
+    </div>
+  </body>
+</html>
